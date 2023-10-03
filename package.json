@@ -7,8 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Steffan153",
   "license": "ISC",
+  "keywords": [
+    "rehype",
+    "link",
+    "rehype-plugin"
+  ],
+  "repository": "https://github.com/Steffan153/rehype-break-links",
+  "homepage": "https://github.com/Steffan153/rehype-break-links",
   "dependencies": {
     "hast-util-is-element": "^3.0.0",
     "unist-util-visit": "^5.0.0"

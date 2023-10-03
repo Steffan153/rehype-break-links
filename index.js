@@ -1,11 +1,12 @@
 import { visit } from 'unist-util-visit';
-import { isElement } from 'hast-util-is-element';
+import { convertElement } from 'hast-util-is-element';
 
-export default function rehypeBreakLinks() {
+export default function rehypeBreakLinks(options) {
+  const is = convertElement((options || {}).test);
   return function (tree) {
     visit(tree, 'element', (node) => {
       if (
-        isElement(node, 'a') &&
+        is(node, 'a') &&
         node.properties?.href &&
         node.children.length === 1 &&
         node.children[0].type === 'text' &&
